@@ -1,13 +1,20 @@
 import React from "react";
 import { FaHandPointRight } from "react-icons/fa";
+
 const Contact = () => {
   return (
-    <div className="w-full   flex flex-col gap-8 p-8 px-8">
-      <div className="flex flex-col gap-1">
-        <h1 className="font-bold text-white text-3xl ">Contact</h1>
-        <div className="h-0.5 ml-1 bg-yellow-600 w-[8%]"></div>
+    <div className="w-full min-h-screen flex flex-col gap-12 p-6 lg:p-10 bg-transparent ">
+      {/* Title Section */}
+      <div className="flex flex-col gap-2 text-center lg:text-left">
+        <h1 className="font-bold text-white text-4xl tracking-wide">Get in Touch</h1>
+        <div className="h-1 bg-gradient-to-r from-yellow-500 to-yellow-700 w-20 rounded-full mx-auto lg:mx-0"></div>
+        <p className="text-gray-400 text-lg mt-2">
+          Have a question or want to work together? Fill out the form below 👇
+        </p>
       </div>
-      <div className="w-full rounded-2xl h-[400px]">
+
+      {/* Map */}
+      <div className="w-full rounded-2xl h-[400px] overflow-hidden shadow-lg border border-gray-700">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114312.51528009187!2d80.25598103996937!3d26.44715007162656!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399c4770b127c46f%3A0x1778302a9fbe7b41!2sKanpur%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1744895529722!5m2!1sen!2sin"
           width="100%"
@@ -16,48 +23,63 @@ const Contact = () => {
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          className="rounded-2xl  shadow-md"
+          className="rounded-2xl"
         ></iframe>
       </div>
-      <div className="h-[400px] w-full flex flex-col gap-8">
-        <p className="text-2xl text-white font-semibold">Contact Form</p>
+
+      {/* Contact Form */}
+      <div className="w-full flex flex-col gap-6">
+        <h2 className="text-3xl font-semibold text-white">Contact Form</h2>
 
         <form
           action="https://formspree.io/f/mgvajwya"
           method="POST"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-6 bg-transparent p-6 rounded-2xl border border-gray-700 shadow-md"
         >
-          <div className="flex flex-col gap-8 p w-full lg:flex-row lg:gap-4 ">
+          {/* Name & Email */}
+          <div className="flex flex-col lg:flex-row gap-6">
             <input
               type="text"
               name="name"
               placeholder="Full Name"
-              className="border-1 border-[#4f4b4b] w-full lg:w-[50%] rounded-lg p-4 text-white" required
+              className="w-full lg:w-1/2 p-4 rounded-xl bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-600 outline-none transition-all"
+              required
             />
             <input
               type="email"
               name="email"
-              placeholder="Email address"
-              className="border-1 border-[#4f4b4b] w-full lg:w-[50%] rounded-lg p-4 text-white" required
+              placeholder="Email Address"
+              className="w-full lg:w-1/2 p-4 rounded-xl bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-600 outline-none transition-all"
+              required
             />
           </div>
-          <input
-            name="subject"
-            type="text"
-            placeholder="Subject"
-            className="border-1 border-[#4f4b4b] w-full rounded-lg p-4 text-white" required
-          />
-          <textarea
-            rows={5}
-            cols={50}
-            name="massage"
-            placeholder="Your Message"
-            className="border-1 border-[#4f4b4b] w-full rounded-lg p-4 text-white"
-          required ></textarea>
 
-          <div className="w-full flex justify-center items-center lg:justify-end mb-4">
-            <button className="text-yellow-600 flex gap-4 px-10 items-center bg-[#2b2929]  rounded-lg py-2 transition-all duration-300 hover:text-yellow-700 hover:scale-105 hover:shadow-lg cursor-pointer hover:bg-[#3a3939]">
-              <FaHandPointRight /> Submit
+          {/* Subject */}
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject"
+            className="w-full p-4 rounded-xl bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-600 outline-none transition-all"
+            required
+          />
+
+          {/* Message */}
+          <textarea
+            name="message"
+            rows={6}
+            placeholder="Your Message..."
+            className="w-full p-4 rounded-xl bg-transparent border border-gray-600 text-white placeholder-gray-400 focus:ring-2 focus:ring-yellow-600 outline-none transition-all"
+            required
+          ></textarea>
+
+          {/* Submit Button */}
+          <div className="flex justify-center lg:justify-end">
+            <button
+              type="submit"
+              className="flex items-center gap-3 px-8 py-3 rounded-xl bg-gradient-to-r from-yellow-500 to-yellow-700 text-black font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-yellow-600/40"
+            >
+              <FaHandPointRight className="text-xl" />
+              Submit
             </button>
           </div>
         </form>

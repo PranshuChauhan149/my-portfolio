@@ -1,78 +1,88 @@
-import React from 'react'
+import React from "react";
 import { FaBookReader } from "react-icons/fa";
-import { FaHandPointRight } from "react-icons/fa";
 import { FaRegEye } from "react-icons/fa";
 import { RiDownloadLine } from "react-icons/ri";
+
 const Rusume = () => {
   return (
-    <div className='p-8 ' 
-    >
-     <div className='mb-6'>
-      <p className='text-3xl text-white font-bold'>Resume</p>
-      <div className='h-0.5 w-[90px] mt-1 ml-0.5 bg-amber-600'></div>
-     </div>
-     <div className='w-[500px]  h-[300px] flex p-2 gap-1'>
-      <div className='w-[60px]  p-2 flex flex-col items-center'>
-        <div className='bg-[#1f1d1d] h-[40px] w-full rounded-lg flex items-center justify-center'>
-          <FaBookReader className='text-yellow-600 text-xl'/>
-        </div>
-        <div className='h-[30px] bg-white w-[1px]'></div>
-        <div className='w-5 bg-black h-5 rounded-full flex justify-center items-center '>
-          <div className='w-2 bg-yellow-600 h-2 rounded-full'></div>
-        </div>
-        <div className='h-[75px] bg-white w-[1px]'></div>
-        <div className='w-5 bg-black h-5 rounded-full flex justify-center items-center '>
-          <div className='w-2 bg-yellow-600 h-2 rounded-full'></div>
-        </div>
+    <div className="p-6 sm:p-10">
+      {/* Heading */}
+      <div className="mb-10">
+        <h2 className="text-4xl font-extrabold text-white tracking-wide">
+          Resume
+        </h2>
+        <div className="h-1 w-24 mt-2 bg-gradient-to-r from-yellow-600 to-yellow-400 rounded-full"></div>
       </div>
-      <div className='w-full flex flex-col gap-6'>
-      <p className='text-2xl text-white p-2 font-bold'>Education</p>
-      <p className=' text-[#878181]'><span className='font-semibold'>Lovely Professional University, Punjab</span>
 
-B.Tech in Computer Science and Information Technology
-<br />
-<span className='text-yellow-600'>2023-2027</span></p>
-<p>
-  <span className='font-semibold text-[#898383]'>Subhash Academy, Chhibramau, Kannauj
-</span>
-<br />
-<span className='text-[#898383]'>Secondary Education (10th)</span>
-<br />
-<span className='text-yellow-600'>2019 – 2021</span></p>
-      </div>
-       
-     </div>
-    <div>
-    <div className='w-[500px]  h-[300px] flex p-2 gap-1'>
-      <div className='w-[60px]  p-2 flex flex-col items-center'>
-        <div className='bg-[#1f1d1d] h-[40px] w-full rounded-lg flex items-center justify-center'>
-          <FaBookReader className='text-yellow-600 text-xl'/>
+      {/* Education Section */}
+      <div className="flex flex-col lg:flex-row gap-10 mb-12">
+        {/* Timeline */}
+        <div className="flex gap-6">
+        <div className="flex flex-col items-center">
+          <div className="bg-transparent h-12 w-12 rounded-full flex items-center justify-center shadow-lg shadow-yellow-600/30">
+            <FaBookReader className="text-yellow-500 text-xl" />
+          </div>
+          <div className="h-40 w-[2px] bg-gradient-to-b from-yellow-500/70 to-transparent mt-2"></div>
         </div>
-        <div className='h-[30px] bg-white w-[1px]'></div>
-        <div className='w-5 bg-black h-5 rounded-full flex justify-center items-center '>
-          <div className='w-2 bg-yellow-600 h-2 rounded-full'></div>
+
+        {/* Content */}
+        <div className="flex flex-col gap-6">
+          <h3 className="text-2xl font-semibold text-yellow-500">Education</h3>
+
+          <div className="bg-transparent p-5 rounded-xl shadow-md border border-gray-800 hover:border-yellow-600 transition">
+            <p className="text-lg font-semibold text-white">
+              Lovely Professional University, Punjab
+            </p>
+            <p className="text-gray-300">B.Tech in CSE & IT</p>
+            <p className="text-yellow-500 font-medium mt-1">2023 – 2027</p>
+          </div>
+
+          <div className="bg-transparent p-5 rounded-xl shadow-md border border-gray-800 hover:border-yellow-600 transition">
+            <p className="text-lg font-semibold text-white">
+              Subhash Academy, Chhibramau, Kannauj
+            </p>
+            <p className="text-gray-300">Secondary Education (10th)</p>
+            <p className="text-yellow-500 font-medium mt-1">2019 – 2021</p>
+          </div>
         </div>
-       
-      
+        </div>
       </div>
-      <div className='w-full flex flex-col gap-6'>
-      <p className='text-2xl text-white p-2 font-bold'>Experience</p>
-     
+
+      {/* Experience Section */}
+      <div className="flex flex-row gap-10 mb-12">
+        {/* Timeline */}
+        <div className="flex flex-col items-center">
+          <div className="bg-transparent h-12 w-12 rounded-full flex items-center justify-center shadow-lg shadow-yellow-600/30">
+            <FaBookReader className="text-yellow-500 text-xl" />
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="flex flex-col gap-6">
+          <h3 className="text-2xl font-semibold text-yellow-500">Experience</h3>
+
+          <div className="bg-transparent p-5 rounded-xl shadow-md border border-gray-800 hover:border-yellow-600 transition">
+            <p className="text-lg font-semibold text-white">
+              Software Development Intern
+            </p>
+            <p className="text-gray-300">Remote / Freelance</p>
+            <p className="text-yellow-500 font-medium mt-1">2025 – Present</p>
+          </div>
+        </div>
       </div>
-       
-     </div>
+
+      {/* Buttons */}
+      <div className="flex flex-col sm:flex-row justify-center sm:justify-end gap-4 mt-6">
+        <button className="flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-yellow-500 border border-yellow-600 bg-[#1f1f1f] hover:bg-yellow-600 hover:text-black transition-all duration-300 shadow-md hover:shadow-yellow-500/40 hover:scale-105">
+          <FaRegEye /> View CV
+        </button>
+
+        <button className="flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-yellow-500 border border-yellow-600 bg-[#1f1f1f] hover:bg-yellow-600 hover:text-black transition-all duration-300 shadow-md hover:shadow-yellow-500/40 hover:scale-105">
+          <RiDownloadLine /> Download CV
+        </button>
+      </div>
     </div>
-    <div className="w-full flex flex-col sm:flex-row justify-center sm:justify-end gap-4 mb-4">
-  <button className="flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-yellow-500 bg-[#2b2929] hover:bg-yellow-600 hover:text-black transition-all duration-300 shadow-md hover:shadow-yellow-500/40 hover:scale-105">
-    <FaRegEye /> View CV
-  </button>
+  );
+};
 
-  <button className="flex gap-2 items-center justify-center px-6 py-2 rounded-lg text-yellow-500 bg-[#2b2929] hover:bg-yellow-600 hover:text-black transition-all duration-300 shadow-md hover:shadow-yellow-500/40 hover:scale-105">
-    <RiDownloadLine /> Download CV
-  </button>
-</div>
-    </div>
-  )
-}
-
-export default Rusume
+export default Rusume;

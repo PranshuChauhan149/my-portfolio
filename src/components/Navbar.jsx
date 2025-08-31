@@ -5,61 +5,76 @@ import { LuCircleChevronDown } from "react-icons/lu";
 import { PiBagBold } from "react-icons/pi";
 import { FaBloggerB } from "react-icons/fa6";
 import { IoMdContact } from "react-icons/io";
+import { FaAward } from "react-icons/fa";
+
 
 const Navbar = () => {
   return (
-    <div className="text-white flex items-center justify-center h-full w-full ">
-      <ul className="w-full flex justify-evenly h-full items-center">
+    <div className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-md shadow-md">
+      <ul className="flex justify-center md:justify-evenly items-center py-4 px-6 gap-6 md:gap-12 text-white font-medium">
+        {/* Home */}
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `${
-              isActive ? "text-yellow-500" : "text-white"
-            } flex gap-1 items-center justify-center`
+            `flex gap-2 items-center transition-all duration-300 hover:text-yellow-400 ${
+              isActive ? "text-yellow-500 font-bold" : "text-gray-300"
+            }`
           }
         >
-          <TiHomeOutline className="text-xl hover:cursor-pointer" />
-          <p className="hidden lg:block font-bold text-sm">Home</p>
+          <TiHomeOutline className="text-xl" />
+          <span className="hidden lg:block text-sm uppercase tracking-wide">Home</span>
         </NavLink>
 
+        {/* Resume */}
         <NavLink
-  to="/rusume"
-  className={({ isActive }) =>
-    `${isActive ? "text-yellow-500" : "text-white"} flex gap-1 items-center justify-center`
-  }
->
-  <LuCircleChevronDown className="text-xl hover:cursor-pointer" />
-  <p className="hidden lg:block font-bold text-sm">Resume</p>
-</NavLink>
+          to="/rusume"
+          className={({ isActive }) =>
+            `flex gap-2 items-center transition-all duration-300 hover:text-yellow-400 ${
+              isActive ? "text-yellow-500 font-bold" : "text-gray-300"
+            }`
+          }
+        >
+          <LuCircleChevronDown className="text-xl" />
+          <span className="hidden lg:block text-sm uppercase tracking-wide">Resume</span>
+        </NavLink>
 
-
-        <NavLink 
+        {/* Project */}
+        <NavLink
           to="/project"
-         className={({isActive})=>`${isActive ? "text-yellow-500 ": "text-white"} flex gap-1 items-center justify-center`}
+          className={({ isActive }) =>
+            `flex gap-2 items-center transition-all duration-300 hover:text-yellow-400 ${
+              isActive ? "text-yellow-500 font-bold" : "text-gray-300"
+            }`
+          }
         >
-          <PiBagBold className="text-xl hover:cursor-pointer" />
-          <p className="hidden lg:block font-bold text-sm">Project</p>
+          <PiBagBold className="text-xl" />
+          <span className="hidden lg:block text-sm uppercase tracking-wide">Projects</span>
         </NavLink>
 
+        {/* Blog */}
         <NavLink
-  to="blog"
-  className={({ isActive }) =>
-    `${isActive ? "text-amber-500" : "text-white"} flex gap-1 items-center justify-center`
-  }
->
-  <FaBloggerB className="text-xl hover:cursor-pointer" />
-  <p className="hidden lg:block font-bold text-sm">Blog</p>
-</NavLink>
-
-        <NavLink
-          to="contact"
-          className={({isActive})=>`${isActive ?"text-amber-500" :"text-white"}
-          flex gap-1 items-center justify-center`}
+          to="/blog"
+          className={({ isActive }) =>
+            `flex gap-2 items-center transition-all duration-300 hover:text-yellow-400 ${
+              isActive ? "text-yellow-500 font-bold" : "text-gray-300"
+            }`
+          }
         >
-          <IoMdContact className="text-xl hover:cursor-pointer" />
-          <p to="/contact" className="hidden lg:block font-bold text-sm">
-            Contact
-          </p>
+          <FaAward className="text-xl" />
+          <span className="hidden lg:block text-sm uppercase tracking-wide">Achievements</span>
+        </NavLink>
+
+        {/* Contact */}
+        <NavLink
+          to="/contact"
+          className={({ isActive }) =>
+            `flex gap-2 items-center transition-all duration-300 hover:text-yellow-400 ${
+              isActive ? "text-yellow-500 font-bold" : "text-gray-300"
+            }`
+          }
+        >
+          <IoMdContact className="text-xl" />
+          <span className="hidden lg:block text-sm uppercase tracking-wide">Contact</span>
         </NavLink>
       </ul>
     </div>

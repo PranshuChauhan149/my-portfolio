@@ -10,3 +10,40 @@
 .slider::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 } */
+/* Home Page Styling */
+/* Home Page Styling */
+body {
+  background-color: #0f0f0f;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Skill Card Wrapper */
+.skill-card {
+  background: linear-gradient(145deg, #1a1a1a, #111);
+  border: 1px solid #222;
+  border-radius: 14px;
+  padding: 20px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 0 15px rgba(255, 200, 0, 0.05);
+}
+
+.skill-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  border: 1px solid #facc15;
+  box-shadow: 0 0 20px rgba(255, 200, 0, 0.3);
+}
+
+/* Skill Images */
+.skill-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  filter: grayscale(40%);
+  transition: all 0.3s ease;
+}
+
+.skill-card:hover img {
+  filter: grayscale(0%);
+  transform: rotate(5deg) scale(1.1);
+}

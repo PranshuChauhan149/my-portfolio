@@ -7,69 +7,85 @@ import { MdOutlineImportantDevices } from "react-icons/md";
 const About = () => {
   return (
     <>
-      <div className="w-full text-white px-4 md:px-8 py-8 flex flex-col gap-6">
-        <div className="flex flex-col gap-1">
-          <h1 className="font-extrabold text-2xl md:text-3xl">About Me</h1>
-          <div className="h-0.5 bg-yellow-600 w-[100px]"></div>
+      {/* About Section */}
+      <div className="w-full text-white px-6 md:px-12 py-16 flex flex-col gap-8 items-center bg-transparent">
+        <div className="flex flex-col items-center gap-3">
+          <h1 className="font-extrabold text-3xl md:text-4xl tracking-wide">
+            👨‍💻 About Me
+          </h1>
+          <div className="h-1 bg-gradient-to-r from-yellow-500 to-orange-500 w-24 rounded-full"></div>
         </div>
 
-        <p className="text-[#e4dddd] text-sm md:text-base">
-          🚀 Aspiring Software Engineer | B.Tech CSE (2027) I am a passionate
-          Computer Science & Engineering student at Lovely Professional
-          University, with a strong interest in Data Structures & Algorithms,
-          Web Development, and System Design. I enjoy solving complex problems
-          and building efficient solutions. I have experience in web
-          development, system design, and networking and have completed
-          certifications in Computer Communications and Packet Switching
-          Networks. With 200+ solved LeetCode problems, I continuously enhance
-          my problem-solving skills. I am always eager to learn and grow,
-          looking for opportunities to contribute effectively and build
-          innovative solutions. Let's connect and create something impactful! 🚀
+        <p className="text-gray-300 text-center max-w-4xl leading-relaxed text-sm md:text-base">
+          🚀 Aspiring Software Engineer | B.Tech CSE (2027)  
+          I am a passionate Computer Science & Engineering student at Lovely Professional University,  
+          with a strong interest in <span className="text-yellow-400">Data Structures & Algorithms</span>,  
+          <span className="text-yellow-400"> Web Development</span>, and <span className="text-yellow-400">System Design</span>.  
+          I enjoy solving complex problems and building efficient solutions.  
+          With <span className="text-yellow-400">400+ solved LeetCode problems</span>, I continuously enhance my skills.  
+          Always eager to learn and grow, I look forward to creating impactful solutions. 🚀
         </p>
 
-        <h2 className="font-extrabold text-2xl md:text-3xl">What I'm Doing</h2>
+        <h2 className="font-extrabold text-2xl md:text-3xl mt-6">💼 What I'm Doing</h2>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-32 pb-16">
+      {/* Service Carbds */}
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8 px-6 md:px-12 pb-20 bg-transparent">
         {/* Card 1 */}
-        <div className="bg-[#2c2b2b] flex items-center p-4 rounded gap-4">
-          <FaUikit className="text-4xl md:text-4xl text-yellow-500" />
+        <div className="bg-transparent backdrop-blur-lg p-6 rounded-2xl flex gap-4 items-start 
+                        border border-gray-700 hover:border-yellow-400 
+                        shadow-md hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-tr from-yellow-500 to-orange-500 p-3 rounded-full">
+            <FaUikit className="text-2xl text-black" />
+          </div>
           <div>
-            <p className="font-bold text-white text-lg md:text-xl">UI/UX Design</p>
-            <p className="text-[#e4dddd] text-sm">
+            <p className="font-bold text-lg">UI/UX Design</p>
+            <p className="text-gray-400 text-sm">
               The most modern and high-quality design at a professional level.
             </p>
           </div>
         </div>
 
         {/* Card 2 */}
-        <div className="bg-[#2c2b2b] flex items-center p-4 rounded gap-4">
-          <MdViewQuilt className="text-4xl md:text-4xl text-yellow-500" />
+        <div className="bg-[#1a1a1a]/70 backdrop-blur-lg p-6 rounded-2xl flex gap-4 items-start 
+                        border border-gray-700 hover:border-yellow-400 
+                        shadow-md hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-tr from-yellow-500 to-orange-500 p-3 rounded-full">
+            <MdViewQuilt className="text-2xl text-black" />
+          </div>
           <div>
-            <p className="font-bold text-white text-lg md:text-xl">Frontend</p>
-            <p className="text-[#e4dddd] text-sm">
+            <p className="font-bold text-lg">Frontend</p>
+            <p className="text-gray-400 text-sm">
               Professional development of modern and responsive web interfaces.
             </p>
           </div>
         </div>
 
         {/* Card 3 */}
-        <div className="bg-[#2c2b2b] flex items-center p-4 rounded gap-4">
-          <HiMiniServerStack className="text-4xl md:text-4xl text-yellow-500" />
+        <div className="bg-[#1a1a1a]/70 backdrop-blur-lg p-6 rounded-2xl flex gap-4 items-start 
+                        border border-gray-700 hover:border-yellow-400 
+                        shadow-md hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-tr from-yellow-500 to-orange-500 p-3 rounded-full">
+            <HiMiniServerStack className="text-2xl text-black" />
+          </div>
           <div>
-            <p className="font-bold text-white text-lg md:text-xl">Backend</p>
-            <p className="text-[#e4dddd] text-sm">
+            <p className="font-bold text-lg">Backend</p>
+            <p className="text-gray-400 text-sm">
               Efficient and scalable server-side development with robust APIs.
             </p>
           </div>
         </div>
 
         {/* Card 4 */}
-        <div className="bg-[#2c2b2b] flex items-center p-4 rounded gap-4">
-          <MdOutlineImportantDevices className="text-4xl md:text-4xl text-yellow-500" />
+        <div className="bg-[#1a1a1a]/70 backdrop-blur-lg p-6 rounded-2xl flex gap-4 items-start 
+                        border border-gray-700 hover:border-yellow-400 
+                        shadow-md hover:shadow-yellow-500/20 transition-all duration-300 hover:scale-105">
+          <div className="bg-gradient-to-tr from-yellow-500 to-orange-500 p-3 rounded-full">
+            <MdOutlineImportantDevices className="text-2xl text-black" />
+          </div>
           <div>
-            <p className="font-bold text-white text-lg md:text-xl">Web Development</p>
-            <p className="text-[#e4dddd] text-sm">
+            <p className="font-bold text-lg">Web Development</p>
+            <p className="text-gray-400 text-sm">
               High-quality development of sites at the professional level.
             </p>
           </div>

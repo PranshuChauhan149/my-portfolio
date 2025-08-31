@@ -1,51 +1,55 @@
-import React from 'react'
-import Home from './pages/Home'
-import Sidebar from './components/Sidebar'
-import Navbar from './components/Navbar'
-import { Route, Routes } from 'react-router-dom'
-import Rusume from './pages/Rusume'
-import Project from './pages/Project'
-import Blog from './pages/Blog'
-import Contact from './pages/Contact'
-
+import React from "react";
+import Home from "./pages/Home";
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import Rusume from "./pages/Rusume";
+import Project from "./pages/Project";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
+import starsVideo from "../src/assets/star.mp4";
 
 const App = () => {
   return (
-    <div className=' h-full lg:h-screen  p-4 lg:p-10 bg-black'>
-      
+    <div className="relative min-h-screen">
+      {/* Starry Background Video */}
+      <video
+        src={starsVideo}
+        autoPlay
+        loop
+        muted
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      />
+      {/* Optional overlay for readability */}
+      <div className="absolute top-0 left-0 w-full h-full bg-transparent -z-5"></div>
 
-  
-    <div className="w-full  h-full flex flex-col  lg:flex-row gap-2.5 ">
-      {/* Profilo */}
-      <div className="w-full bg-[#2b2929e7] lg:w-[25%] rounded-lg">
-        <Sidebar/>
+      {/* Main Content */}
+      <div className="relative z-10 h-full lg:h-screen p-4 lg:p-8 text-white">
+        <Navbar />
 
-      </div>
-      {/* secondMain */}
-      <div className=" w-full h-full rounded-lg flex flex-col gap-2.5">
-        {/* navbar */}
-        <div className="bg-[#2b2929e7] h-[50px] rounded-lg">
-          <Navbar/>
-        </div>
-        {/* main Part */}
-        <div className=" slider bg-[#2b2929e7] rounded-lg overflow-auto h-[500px] lg:h-full lg:overflow-auto">
-          
-          <Routes>
-            <Route path='/' element={<Home/>}/>
-            <Route path='/rusume' element={<Rusume/>}/>
-            <Route path='/project' element={<Project/>}/>
-            <Route path='/blog' element={<Blog/>}/>
-            <Route path='/contact' element={<Contact/>}/>
-          </Routes>
+        <div className="w-full h-full flex flex-col lg:flex-row gap-4">
+          {/* Sidebar */}
+          <div className="w-full lg:w-[25%] bg-transparent rounded-2xl shadow-lg backdrop-blur-md border border-gray-700 lg:mt-8 mt-10">
+            <Sidebar />
+          </div>
+
+          {/* Right Section */}
+          <div className="w-full h-full flex flex-col gap-4">
+            {/* Main Content */}
+            <div className="flex-1 bg-transparent rounded-2xl shadow-inner overflow-y-auto p-4 border border-gray-700 lg:mt-8">
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/rusume" element={<Rusume />} />
+                <Route path="/project" element={<Project />} />
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    </div>
-  )
-  
-      
-    
-  
-}
+  );
+};
 
-export default App
+export default App;
