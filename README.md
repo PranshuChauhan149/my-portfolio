@@ -1,12 +1,49 @@
-# React + Vite
+# Pranshu Chauhan - Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Portfolio Banner](https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif)
 
-Currently, two official plugins are available:
+## 👋 About Me
+Hi, I'm **Pranshu Chauhan**, a passionate **FullStack Developer**.  
+I build modern web applications using **React, Next.js, Node.js, MongoDB**, and more.  
+I love solving problems, learning new technologies, and sharing knowledge with the community.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🌱 Currently exploring **AI integration with web apps**
+- 💻 Experienced in **MERN Stack Development**
+- 🎯 Focused on **Clean UI & Performance Optimization**
+- 🏆 Enthusiastic participant in **Hackathons & Competitions**
 
-## Expanding the ESLint configuration
+## 🚀 Skills
+- **Frontend:** React.js, Next.js, Tailwind CSS, HTML, CSS, JavaScript  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB, Firebase  
+- **Tools:** Git, GitHub, VSCode, Figma  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📂 Projects
+Here are some of my projects (Check live demos & source code):
+
+| Project | Tech Stack | Live Demo |
+|---------|------------|-----------|
+| Modern Travel Website | Next.js, TypeScript, Tailwind CSS | [View](#) |
+| Gym Management System | React, Node.js, MongoDB | [View](#) |
+| Instagram Reels Clone | React, Redux, Node.js | [View](#) |
+| PUBG-Style Game | JavaScript, Canvas | [View](#) |
+
+## 🏆 Achievements
+- Completed multiple **FullStack development programs**  
+- Participated in **Hackathons & Coding competitions**  
+- Earned **certificates** in React.js, Node.js & AI technologies
+
+## 📫 Contact Me
+- 📧 Email: pranshuchauha149@gmail.com  
+- 📱 Phone: +91 6388655896  
+- 🌐 Website: [YourPortfolioLink](#)
+
+## 🔗 Socials
+[![Instagram](https://img.shields.io/badge/Instagram-000?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/) 
+[![Twitter](https://img.shields.io/badge/Twitter-000?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/i/flow/single_sign_on)
+[![GitHub](https://img.shields.io/badge/GitHub-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/)
+[![LeetCode](https://img.shields.io/badge/LeetCode-000?style=for-the-badge&logo=leetcode&logoColor=white)](https://leetcode.com/u/Pranshu_chauhan/)
+
+---
+
+> “Code is like humor. When you have to explain it, it’s bad.” – Cory House
